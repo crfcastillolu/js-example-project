@@ -1,5 +1,7 @@
+
+
 var precio = parseInt(Math.round(""));
-var pais = ("CHIle").toLowerCase();
+var pais = ("").toLowerCase();
 
 var Calcular = function(){
 	this.descuento = function(precio){
@@ -35,14 +37,16 @@ var Calcular = function(){
 	}
 
 	this.iva = function(pais){
-		if (pais == "colombia"){
+		if (pais === "") {
+			return 'Ingrese un país';
+		} else if (pais == "colombia"){
 			return parseInt(Math.round(valorConDescuento*1.16));
 		} else if (pais == "argentina") {
 			return Math.round(valorConDescuento*1.05);
 		} else if (pais === "chile"){
 			return parseInt(Math.round(valorConDescuento*1.12));
 		}else {
-			return 'Inserte un país';
+			return 'input incorrecto, ingrese un país';
 		}
 	}
 }

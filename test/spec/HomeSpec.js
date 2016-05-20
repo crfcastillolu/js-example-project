@@ -73,7 +73,7 @@ describe("Calcular precio con descuento", function() {
 
     it("un producto con un valor de 2325 debe tener el 12% de iva y quedar en 2604", function() {
       var resultado = calcularDescuento.iva(pais)
-      expect(resultado).toBe(2604);
+      expect(resultado).toBe('Ingrese un país');
     });
 
   });
